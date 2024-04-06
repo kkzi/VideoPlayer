@@ -130,7 +130,8 @@ int VideoStateData::open_media(VideoState* is)
     //	seek_by_bytes = (ic->iformat->flags & AVFMT_TS_DISCONT) &&
     //strcmp("ogg", ic->iformat->name);
 
-    is->max_frame_duration = (ic->iformat->flags & AVFMT_TS_DISCONT) ? 10.0 : 3600.0;
+    //is->max_frame_duration = (ic->iformat->flags & AVFMT_TS_DISCONT) ? 10.0 : 3600.0;
+    is->max_frame_duration = 2.0;
 
     /* if seeking requested, we execute it */
     if (start_time != AV_NOPTS_VALUE)
